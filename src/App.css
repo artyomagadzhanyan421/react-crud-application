@@ -1,0 +1,171 @@
+.Home,
+.Job,
+.Edit,
+.Create {
+    background: #0F172A;
+    color: white;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.Job,
+.Edit,
+.Create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Jobs {
+    margin: auto;
+    display: grid;
+    width: fit-content;
+    max-width: 1350px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 40px;
+}
+
+.job {
+    background: #1E293B;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.1);
+}
+
+.job.jobData {
+    max-width: 600px;
+    margin: 50px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.location {
+    color: #94A3B8;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.description {
+    color: #E2E8F0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    margin: 20px 0px;
+    font-size: 15px;
+}
+
+.job.jobData .description {
+    -webkit-line-clamp: initial;
+}
+
+.job.createJob {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 500px;
+}
+
+.job.createJob button {
+    margin-left: initial;
+}
+
+.job.createJob input, 
+.job.createJob textarea {
+    background-color: #334155;
+    color: white;
+    resize: none;
+    border: none;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    padding: 17px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.job.createJob input::placeholder, 
+.job.createJob textarea::placeholder {
+    color: #94A3B8;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.actions.editJob {
+    padding-top: 0px;
+}
+
+.actions a,
+.delete,
+.create {
+    background-color: #1D4ED8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    gap: 12px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.create {
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.1);
+    margin-left: auto;
+}
+
+.actions a:hover,
+.create:hover {
+    background-color: #1E40AF;
+}
+
+.delete {
+    background-color: #BE123C;
+
+    &:hover {
+        background-color: #9F1239;
+    }
+}
+
+.editBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width: 1250px) {
+    .actions {
+        flex-direction: column;
+        gap: 7.5px;
+    }
+
+    .actions a {
+        width: 100%;
+    }
+}
+
+@media(max-width: 1130px) {
+    .Jobs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 740px) {
+    .Jobs {
+        grid-template-columns: 1fr;
+    }
+}
