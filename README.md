@@ -31,12 +31,6 @@ Install dependencies:
 npm install
 ```
 
-Ensure JSON Server is installed:
-
-```bash
-npm install json-server
-```
-
 Run JSON Server (create another terminal for that):
 
 ```bash
