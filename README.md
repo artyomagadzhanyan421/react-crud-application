@@ -20,5 +20,4 @@ npm run server
 npm run dev
 ```
 
-
 💙 Follow to see more conetent like this!
