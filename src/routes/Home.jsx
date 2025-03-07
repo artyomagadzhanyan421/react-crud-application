@@ -8,7 +8,7 @@ import Jobs from '../components/Jobs';
 import useFetch from "../hooks/useFetch";
 
 function Home() {
-  const { jobs, loading } = useFetch("http://localhost:5000/jobs");
+  const { jobs, loading } = useFetch("https://crud-api-steel.vercel.app/jobs");
 
   const block = {
     maxWidth: "1350px",

@@ -6,7 +6,7 @@ import useFetch from '../hooks/useFetch';
 function Job() {
   const { id } = useParams();
 
-  const { jobs, loading } = useFetch(`http://localhost:5000/jobs/${id}`);
+  const { jobs, loading } = useFetch(`https://crud-api-steel.vercel.app/jobs/${id}`);
 
   const screen = {
     background: "#0F172A",

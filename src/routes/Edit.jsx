@@ -12,7 +12,7 @@ function Edit() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const { jobs, loading } = useFetch(`http://localhost:5000/jobs/${id}`);
+  const { jobs, loading } = useFetch(`https://crud-api-steel.vercel.app/jobs/${id}`);
 
   const [edit, setEdit] = useState(false);
   const [trash, setTrash] = useState(false);
