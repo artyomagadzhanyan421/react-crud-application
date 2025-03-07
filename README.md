@@ -1,9 +1,9 @@
-## React CRUD Application
+## React MERN Application
 
 * Full CRUD functionality (GET, PUT, POST, DELETE requests);
 * Reusable componenets
 * Passing states with prop
-* JSON Server fake API
+* API integration (Node.js and MongoDB)
 * React Router for navigation
 * Boxicons for icons
 
