@@ -7,7 +7,7 @@ import "boxicons";
 const apiUrl = import.meta.env.VITE_API_URL; // Defined outside the component
 
 function Create() {
-    document.title = "React Application | Create Job";
+    document.title = "MERN Application | Create Job";
     const navigate = useNavigate();
 
     const [title, setTitle] = useState("");
