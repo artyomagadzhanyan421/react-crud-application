@@ -33,11 +33,12 @@ function Edit() {
 
   const updateJob = { title, location, type, description }
 
+  // Edit job
   const editFunc = (e) => {
     e.preventDefault();
     setEdit(true);
 
-    fetch(`http://localhost:5000/jobs/${id}`, {
+    fetch(`https://crud-api-steel.vercel.app/jobs/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updateJob)
@@ -46,10 +47,11 @@ function Edit() {
     })
   }
 
+  // Delete job
   const deleteFunc = () => {
     setTrash(true);
 
-    fetch(`http://localhost:5000/jobs/${id}`, {
+    fetch(`https://crud-api-steel.vercel.app/jobs/${id}`, {
       method: "DELETE"
     }).then(() => {
       navigate(-1);
