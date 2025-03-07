@@ -89,11 +89,11 @@ function Edit() {
           <input type="text" placeholder='Type' value={type} onChange={(e) => setType(e.target.value)} />
           <textarea placeholder='Description' style={{ height: "200px" }} value={description} onChange={(e) => setDescription(e.target.value)} />
           <div className="actions editJob">
-            <button className='create' onClick={editFunc}>
+            <button className={edit ? "create createDis" : "create"} type="submit" disabled={edit}>
               <box-icon name={edit ? "refresh" : "edit-alt"} color="white" size="24px"></box-icon>
               <span>{edit ? "Editing" : "Edit"}</span>
             </button>
-            <button type="button" className='delete' onClick={deleteFunc}>
+            <button type="button" className={trash ? "delete deleteDis" : "delete"} onClick={deleteFunc} disabled={trash}>
               <box-icon name={trash ? "refresh" : "trash"} color="white" size="24px"></box-icon>
               <span>{trash ? "Trashing" : "Trash"}</span>
             </button>

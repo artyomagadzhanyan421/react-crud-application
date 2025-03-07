@@ -129,6 +129,15 @@
     margin-left: auto;
 }
 
+.create.createDis {
+    background-color: #2563EB;
+    cursor: not-allowed;
+
+    &:hover {
+        background-color: #2563EB;
+    }
+}
+
 .actions a:hover,
 .create:hover {
     background-color: #1E40AF;
@@ -139,6 +148,15 @@
 
     &:hover {
         background-color: #9F1239;
+    }
+}
+
+.delete.deleteDis {
+    background-color: #E11D48;
+    cursor: not-allowed;
+
+    &:hover {
+        background-color: #E11D48;
     }
 }
 

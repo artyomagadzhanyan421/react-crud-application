@@ -42,7 +42,7 @@ function Create() {
                 <input type="text" placeholder='Location' value={location} onChange={(e) => setLocation(e.target.value)} required />
                 <input type="text" placeholder='Type' value={type} onChange={(e) => setType(e.target.value)} required />
                 <textarea placeholder='Description' style={{ height: "200px" }} value={description} onChange={(e) => setDescription(e.target.value)} required />
-                <button type="submit" className='create'>
+                <button type="submit" className={disabled ? "create createDis" : "create"} disabled={disabled}>
                     <box-icon name={disabled ? "refresh" : "plus-circle"} color="white" size="24px"></box-icon>
                     <span>{disabled ? "Loading..." : "Create"}</span>
                 </button>
