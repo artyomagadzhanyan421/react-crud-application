@@ -3,10 +3,12 @@ import { useParams } from 'react-router';
 
 import useFetch from '../hooks/useFetch';
 
+const apiUrl = import.meta.env.VITE_API_URL; // Defined outside the component
+
 function Job() {
   const { id } = useParams();
 
-  const { jobs, loading } = useFetch(`https://crud-api-steel.vercel.app/jobs/${id}`);
+  const { jobs, loading } = useFetch(`${apiUrl}${id}`);
 
   const screen = {
     background: "#0F172A",

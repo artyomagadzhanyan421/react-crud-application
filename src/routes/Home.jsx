@@ -7,8 +7,10 @@ import Jobs from '../components/Jobs';
 // Hooks 
 import useFetch from "../hooks/useFetch";
 
+const apiUrl = import.meta.env.VITE_API_URL; // Defined outside the component
+
 function Home() {
-  const { jobs, loading } = useFetch("https://crud-api-steel.vercel.app/jobs");
+  const { jobs, loading } = useFetch(`${apiUrl}`);
 
   const block = {
     maxWidth: "1350px",

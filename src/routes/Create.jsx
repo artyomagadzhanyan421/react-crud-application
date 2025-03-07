@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router';
 // Boxicons
 import "boxicons";
 
+const apiUrl = import.meta.env.VITE_API_URL; // Defined outside the component
+
 function Create() {
     document.title = "React Application | Create Job";
     const navigate = useNavigate();
@@ -21,7 +23,7 @@ function Create() {
 
         setDeisabled(true)
 
-        fetch("https://crud-api-steel.vercel.app/jobs", {
+        fetch(`${apiUrl}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(job)

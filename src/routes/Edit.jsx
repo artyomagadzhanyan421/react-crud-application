@@ -8,11 +8,13 @@ import useFetch from "../hooks/useFetch";
 // Boxicons
 import "boxicons";
 
+const apiUrl = import.meta.env.VITE_API_URL; // Defined outside the component
+
 function Edit() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const { jobs, loading } = useFetch(`https://crud-api-steel.vercel.app/jobs/${id}`);
+  const { jobs, loading } = useFetch(`${apiUrl}${id}`);
 
   const [edit, setEdit] = useState(false);
   const [trash, setTrash] = useState(false);
@@ -38,7 +40,7 @@ function Edit() {
     e.preventDefault();
     setEdit(true);
 
-    fetch(`https://crud-api-steel.vercel.app/jobs/${id}`, {
+    fetch(`${apiUrl}${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updateJob)
@@ -51,7 +53,7 @@ function Edit() {
   const deleteFunc = () => {
     setTrash(true);
 
-    fetch(`https://crud-api-steel.vercel.app/jobs/${id}`, {
+    fetch(`${apiUrl}${id}`, {
       method: "DELETE"
     }).then(() => {
       navigate(-1);
