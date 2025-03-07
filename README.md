@@ -31,12 +31,6 @@ Install dependencies:
 npm install
 ```
 
-Run JSON Server (create another terminal for that):
-
-```bash
-npm run server
-```
-
 Run React application:
 
 ```bash
